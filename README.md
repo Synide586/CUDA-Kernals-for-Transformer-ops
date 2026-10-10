@@ -25,7 +25,6 @@ Each version fixes the main bottleneck of the previous one.
 | 2d_blocktiling_v2 | conflict-free 128-bit shared-memory loads, 2 blocks per SM | **4,170** | **100.3%** |
 | cuBLAS | NVIDIA's library | 4,157 | 100% |
 
-![GEMM throughput](results/gemm_gflops.png)
 
 What I learned:
 
@@ -46,8 +45,6 @@ These operations do very little math per element, so speed is limited by memory 
 | warp_reg | one warp per row, row kept in registers | 223 (best up to 512 columns) |
 | PyTorch softmax | | 222 |
 
-![Softmax bandwidth](results/softmax_bw.png)
-![LayerNorm bandwidth](results/layernorm_bw.png)
 
 What I learned:
 
@@ -71,7 +68,6 @@ Time in ms (lower is better), 16 heads, head size 64:
 | 8192 | yes | 135.0 | 68.3 | 48.6 | 50.4 |
 | 16384 | yes | out of memory | 285.4 | 201.8 | 195.7 |
 
-![Attention, causal](results/attention_causal.png)
 
 - **flash_v1:** one thread per query row. Simple, but slow.
 - **flash_v2:** 256 threads share a 64x64 tile; each computes a 4x4 block (the register trick from Part 1), and row maximums and sums use warp shuffles (from Part 2). With a causal mask it skips tiles above the diagonal.
