@@ -109,7 +109,7 @@ With the v2 matmul, the full attention layer built from these kernels runs at 0.
 ## How to run (Google Colab, T4 GPU) Run from inside the cuda-transformer-kernels
 
 ```bash
-!git clone https:https://github.com/Synide586/CUDA-Kernals-for-Transformer-ops
+!git clone https:https://github.com/Synide586/CUDA-Kernels-for-Transformer-ops
 %cd cuda-transformer-kernels
 !make                                  # build the C++ benchmarks
 !make run && make plot                 # Part 1: GEMM
