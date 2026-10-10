@@ -1,0 +1,15 @@
+op,kernel,rows,cols,ms,gbs
+softmax,torch_softmax,8192,128,0.0362,231.81
+layernorm,torch_layernorm,8192,128,0.0821,102.22
+softmax,torch_softmax,8192,256,0.0711,235.81
+layernorm,torch_layernorm,8192,256,0.0950,176.52
+softmax,torch_softmax,8192,512,0.1447,231.90
+layernorm,torch_layernorm,8192,512,0.1404,238.95
+softmax,torch_softmax,8192,768,0.2218,226.90
+layernorm,torch_layernorm,8192,768,0.2098,239.86
+softmax,torch_softmax,8192,1024,0.3030,221.45
+layernorm,torch_layernorm,8192,1024,0.2932,228.90
+softmax,torch_softmax,8192,2048,0.6059,221.50
+layernorm,torch_layernorm,8192,2048,0.7741,173.38
+softmax,torch_softmax,8192,4096,1.0847,247.47
+layernorm,torch_layernorm,8192,4096,1.6114,166.58

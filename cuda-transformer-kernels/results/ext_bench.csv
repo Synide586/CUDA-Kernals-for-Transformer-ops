@@ -1,0 +1,8 @@
+op,shape,tkernels_ms,torch_ms,torch_over_ours,max_abs_diff
+softmax,8192x512,0.1444,0.1435,0.993,3.725e-09
+softmax,8192x4096,1.7749,1.0851,0.611,1.863e-09
+layer_norm,8192x768,0.2362,0.2105,0.891,1.907e-06
+matmul,4096^3,31.1018,32.9709,1.060,0.000e+00
+attention,2x8x4096x64,24.3350,21.5727,0.886,1.416e-07
+attention causal,2x8x4096x64,12.3959,11.2579,0.908,4.768e-07
+attention sublayer,2x2048x512,5.7290,5.3102,0.927,1.669e-06
