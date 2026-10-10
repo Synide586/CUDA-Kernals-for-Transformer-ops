@@ -106,10 +106,10 @@ Called from Python (ratio above 1.00x means ours is faster):
 
 With the v2 matmul, the full attention layer built from these kernels runs at 0.93x PyTorch's speed and matches its output to within 2e-6; `matmul` itself is 6% faster than `torch.matmul` at 4096. For very short kernels (around 0.2 ms), call overhead and measurement setup matter, so differences under about 10% between the C++ and Python benchmarks should not be over-interpreted.
 
-## How to run (Google Colab, T4 GPU)
+## How to run (Google Colab, T4 GPU) Run from inside the cuda-transformer-kernels
 
 ```bash
-!git clone <repo-url>
+!git clone https:https://github.com/Synide586/CUDA-Kernals-for-Transformer-ops
 %cd cuda-transformer-kernels
 !make                                  # build the C++ benchmarks
 !make run && make plot                 # Part 1: GEMM
